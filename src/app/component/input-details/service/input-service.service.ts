@@ -27,10 +27,10 @@ export class InputServiceService {
     j.amarid = 1;
     j.amarname = "valk";
     ggg.push(j);
-
-    j.amarid = 2;
-    j.amarname = "nox";
-    ggg.push(j);
+    let jj: Input2Model = new Input2Model();
+    jj.amarid = 2;
+    jj.amarname = "nox";
+    ggg.push(jj);
 
 
 
@@ -46,14 +46,16 @@ export class InputServiceService {
     k.sessionName = "May-June";
     gg.push(k);
 
-    k.sessionId = 2;
-    k.sessionName = "Nov-Dec";
-    gg.push(k);
+    let kk: InputsModel = new InputsModel();
+    kk.sessionId = 2;
+    kk.sessionName = "Nov-Dec";
+    gg.push(kk);
 
 
-    k.sessionId = 3;
-    k.sessionName = "Mar-Apr";
-    gg.push(k);
+    let kkk: InputsModel = new InputsModel();
+    kkk.sessionId = 3;
+    kkk.sessionName = "Mar-Apr";
+    gg.push(kkk);
 
 
 
