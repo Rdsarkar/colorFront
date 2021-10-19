@@ -1,0 +1,68 @@
+<!-- <div class="row">
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem>Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+    </div> -->
+
+    <form>
+        
+          <label for="exampleFormControlInput1"> Exam Fee Details</label>
+         
+       
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Example Level</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option  *ngFor="let input1 of examlevel" value="{{input1.subId}}">{{input1.subName}}</option>
+         
+          </select>
+        </div>
+
+        <div class="row">
+          <!-- <div class="col">
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option  *ngFor="let inputs of session" value="{{inputs.sessionId}}">{{inputs.sessionName}}</option>
+           
+            </select>
+          </div> -->
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Last name">
+          </div>
+        </div>
+      </form>
+
+
+
+      <!-- <form>
+        
+        <label for="exampleFormControlInput1"> Exam Fee Details</label>
+       
+     
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Example Level</label>
+        <select class="form-control" id="exampleFormControlSelect1" >
+          <option>61</option>
+          <option>62</option>
+          <option>63</option>
+       
+        </select>
+      </div>
+     
+    </form>
+
+
+    <form>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name">
+        </div>
+      </div>
+    </form> -->
