@@ -18,7 +18,7 @@ export class InputDetailsComponent implements OnInit {
   examlevel: Input1Model[] = [];
   ggggqdgwgwkegjh: Input2Model[] = []
   session: InputsModel[] = [];
-  amarYear: number = new Date().getFullYear();
+  sessionYear: number = new Date().getFullYear();
   ngOnInit(): void {
     this.ggggqdgwgwkegjh = this.inputServiceService.Einpu2();
     this.session = this.inputServiceService.Einputs();
@@ -37,10 +37,10 @@ export class InputDetailsComponent implements OnInit {
     );
   }
 
-  amarCode(): number[] {
+  sessionYears(): number[] {
     let i: number;
     let j: number[] =[];
-    for (i = this.amarYear; i >= this.amarYear - 20; i--) {
+    for (i = this.sessionYear; i >= this.sessionYear - 20; i--) {
       j.push(i);
     }
     return j;
