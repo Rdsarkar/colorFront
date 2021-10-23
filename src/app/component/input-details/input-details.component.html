@@ -1,90 +1,30 @@
-<!-- <div class="row">
+<form>
+
+  <label for="exampleFormControlInput1"> Exam Fee Details</label>
+
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example Level</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option *ngFor="let input1 of examlevel" value="{{input1.subId}}">{{input1.subName}}</option>
+
+    </select>
+  </div>
+
+  <div class="row">
+
     <div class="col">
-      <div ngbDropdown class="d-inline-block">
-        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-          <button ngbDropdownItem>Action - 1</button>
-          <button ngbDropdownItem>Another Action</button>
-          <button ngbDropdownItem>Something else is here</button>
-        </div>
-      </div>
-    </div> -->
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option *ngFor="let inputs of session" value="{{inputs.sessionId}}">{{inputs.sessionName}}</option>
 
-    <form>
-        
-          <label for="exampleFormControlInput1"> Exam Fee Details</label>
-         
-       
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Example Level</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option  *ngFor="let input1 of examlevel" value="{{input1.subId}}">{{input1.subName}}</option>
-         
-          </select>
-        </div>
+      </select>
+    </div>
+    <div class="col">
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option *ngFor="let input1 of sessionYears()" value="{{input1}}">{{input1}}</option>
 
-        <div class="row">
-          
-          <div class="col">
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option  *ngFor="let inputs of session" value="{{inputs.sessionId}}">{{inputs.sessionName}}</option>
-           
-            </select>
-          </div>
-          <div class="col">
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option  *ngFor="let input1 of sessionYears()" value="{{input1}}">{{input1}}</option>
-           
-            </select>
-           
-          </div>
+      </select>
 
-
-          <!-- <p>Simple datepicker</p>
-
-<ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
-
-<hr/>
-
-<button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo()">To current month</button>
-<button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo({year: 2013, month: 2})">To Feb 2013</button>
-
-<hr/>
-
-<pre>Month: {{ date.month }}.{{ date.year }}</pre>
-<pre>Model: {{ model | json }}</pre>
-          <button type="button" class="btn btn-secondary btn-sm">Small button</button> -->
-
-        </div>
-      </form>
-
-
-
-      <!-- <form>
-        
-        <label for="exampleFormControlInput1"> Exam Fee Details</label>
-       
-     
-      <div class="form-group">
-        <label for="exampleFormControlSelect1">Example Level</label>
-        <select class="form-control" id="exampleFormControlSelect1" >
-          <option>61</option>
-          <option>62</option>
-          <option>63</option>
-       
-        </select>
-      </div>
-     
-    </form>
-
-
-    <form>
-      <div class="row">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="First name">
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Last name">
-        </div>
-      </div>
-    </form> -->
+    </div>
+  </div>
+</form>
