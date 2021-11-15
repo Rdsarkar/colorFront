@@ -4,9 +4,12 @@ export class Output1Model {
     formNo!: string;
     name!: string;
     fName!: string;
-    // "exfeepayslipdate": "2021-09-20T00:00:00",
+    exfeepayslipdate!: string;
     exfeepayslipno!: string;
     exfeepayslipbank!: string;
     exfeepayslipbr!: string;
     exfeepayslipamt!: number;
 }
+
+
+// "exfeepayslipdate": "2021-09-20T00:00:00",
