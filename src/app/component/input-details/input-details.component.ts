@@ -5,6 +5,8 @@ import { InputsModel } from './model/inputs.model';
 import { Res } from './model/res.model';
 import { InputServiceService } from './service/input-service.service';
 import { NgbDateStruct, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
+import { Router} from '@angular/router'
+import { SubmitModel } from './model/submit.model';
 
 @Component({
   selector: 'app-input-details',
@@ -14,11 +16,13 @@ import { NgbDateStruct, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
 export class InputDetailsComponent implements OnInit {
 
 
-  constructor(private inputServiceService: InputServiceService) { }
+  constructor(private inputServiceService: InputServiceService, private router: Router) { }
   examlevel: Input1Model[] = [];
   ggggqdgwgwkegjh: Input2Model[] = []
   session: InputsModel[] = [];
   sessionYear: number = new Date().getFullYear();
+ 
+  submit: SubmitModel [] =[];
   ngOnInit(): void {
     this.ggggqdgwgwkegjh = this.inputServiceService.Einpu2();
     this.session = this.inputServiceService.Einputs();
@@ -35,6 +39,14 @@ export class InputDetailsComponent implements OnInit {
 
       }
     );
+
+    // this.router.navigate(['output'], { queryParams: 
+    //   { subId: this.examlevel,
+    //     sessionId: this.session ,
+    //     year: this.sessionYear,
+    //     // sum: number | undefined;
+      
+    //   } });
   }
 
   sessionYears(): number[] {
@@ -44,6 +56,11 @@ export class InputDetailsComponent implements OnInit {
       j.push(i);
     }
     return j;
+  }
+
+  searchButton(x: SubmitModel)
+  {
+
   }
 
 }
