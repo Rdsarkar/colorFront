@@ -60,7 +60,8 @@ export class InputDetailsComponent implements OnInit {
 
   searchButton(x: SubmitModel)
   {
-
+    let i:number;
+    
   }
 
 }
