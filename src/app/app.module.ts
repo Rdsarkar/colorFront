@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InputDetailsComponent } from './component/input-details/input-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { OutputDetailsComponent } from './component/output-details/output-details.component'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { OutputDetailsComponent } from './component/output-details/output-detail
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

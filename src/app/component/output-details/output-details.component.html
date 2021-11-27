@@ -16,42 +16,42 @@
   </div>
 
   <br>
-  <h5 style="text-align: center;">Exam fee details for Certificate LEVEL of May-June, 2019</h5> <br>
+  <h5 style="text-align: center;">Exam fee details for {{raj?.payload?.examLevelName}} of {{raj?.payload?.monthName}}, {{raj?.payload?.sessionYear}}</h5> <br>
 
 
 
-  <table class="table col-10 offset-1">
+  <table class="table col-10 offset-1" *ngIf="raj">
     <thead>
       <tr>
-        <th scope="col" style = "border: 1px solid black;">Reg. No.</th>
-        <th scope="col" style = "border: 1px solid black;">Form No.</th>
-        <th scope="col" style = "border: 1px solid black;">Name</th>
-        <th scope="col" style = "border: 1px solid black;">Father's Name</th>
-        <th scope="col" style = "border: 1px solid black;">Pay Date</th>
-        <th scope="col" style = "border: 1px solid black;">Pay slip #</th>
-        <th scope="col" style = "border: 1px solid black;">Bank & Branch</th>
-        <th scope="col" style = "border: 1px solid black;">Amount</th>
+        <th scope="col" style="border: 1px solid black;">Reg. No.</th>
+        <th scope="col" style="border: 1px solid black;">Form No.</th>
+        <th scope="col" style="border: 1px solid black;">Name</th>
+        <th scope="col" style="border: 1px solid black;">Father's Name</th>
+        <th scope="col" style="border: 1px solid black;">Pay Date</th>
+        <th scope="col" style="border: 1px solid black;">Pay slip #</th>
+        <th scope="col" style="border: 1px solid black;">Bank & Branch</th>
+        <th scope="col" style="border: 1px solid black;">Amount</th>
 
 
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td scope="row" style = "border: 1px solid black;">gg0</td>
+      <tr *ngFor="let lol of raj.payload.output">
+        <td scope="row" style="border: 1px solid black;">{{lol.regNo}}</td>
 
-        <td scope="row" style = "border: 1px solid black;">gg1</td>
+        <td scope="row" style="border: 1px solid black;">{{lol.formNo}}</td>
 
-        <td scope="row" style = "border: 1px solid black;">gg2</td>
+        <td scope="row" style="border: 1px solid black;">{{lol.name}}</td>
 
-        <td scope="row" style = "border: 1px solid black;">gg3</td>
+        <td scope="row" style="border: 1px solid black;">{{lol.fName}}</td>
 
-        <td scope="row" style = "border: 1px solid black;">gg4</td>
+        <td scope="row" style="border: 1px solid black;">{{lol.exfeepayslipdate}}</td>
 
-        <td scope="row" style = "border: 1px solid black;">gg5</td>
+        <td scope="row" style="border: 1px solid black;">{{lol.exfeepayslipno}}</td>
 
-        <td scope="row" style = "border: 1px solid black;">gg6</td>
+        <td scope="row" style="border: 1px solid black;">{{lol.exfeepayslipbank}}, {{lol.exfeepayslipbr}}</td>
 
-        <td scope="row" style = "border: 1px solid black;">gg7</td>
+        <td scope="row" style="border: 1px solid black;">{{lol.exfeepayslipamt}}</td>
       </tr>
       <tr>
         <td></td>
@@ -61,27 +61,18 @@
         <td></td>
         <td></td>
         <th style="text-align: end;">Total : </th>
-        <td style = "border: 1px solid black;">Amount</td>
+        <td style="border: 1px solid black;">{{raj.payload.sum}}</td>
       </tr>
     </tbody>
     <b>Inword : </b>
- 
+
   </table>
- 
+
   <hr class="col-10 offset-1" style="border: .01em solid lightslategrey">
- 
+
   <div class="col-12" style="font-weight: bold;">
-    
+
     <div class="col-6 offset-1"> E-mail: president@icab.org.bd, secretary@icab.org.bd, dos@icab.org.bd <br>
       Web: www.icab.org.bd</div>
   </div>
-
-
 </div>
-
-<!-- <table style="border-color: black;">
-  <tr>
-    <td>fg</td>
-    <td>gg</td>
-  </tr>
-</table> -->

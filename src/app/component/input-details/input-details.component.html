@@ -7,7 +7,8 @@
 
   <div class="form-group">
     <label for="exampleFormControlSelect1">Example Level</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <select [(ngModel)]="inputEl" class="form-control" id="exampleFormControlSelect1" name="el" required>
+      <option value="undefined" disabled>Please select</option>
       <option *ngFor="let input1 of examlevel" value="{{input1.subId}}">{{input1.subName}}</option>
 
     </select>
@@ -16,13 +17,15 @@
   <div class="row">
 
     <div class="col">
-      <select class="form-control" id="exampleFormControlSelect1">
+      <select [(ngModel)]="inputMi" class="form-control"  id="exampleFormControlSelect1" name="mi" required>
+        <option value="undefined" disabled>Please select</option>
         <option *ngFor="let inputs of session" value="{{inputs.sessionId}}">{{inputs.sessionName}}</option>
 
       </select>
     </div>
     <div class="col">
-      <select class="form-control" id="exampleFormControlSelect1">
+      <select [(ngModel)]="inputSy"  name="sy" class="form-control" id="exampleFormControlSelect1" required>
+        <option value="undefined" disabled>Please select</option>
         <option *ngFor="let input1 of sessionYears()" value="{{input1}}">{{input1}}</option>
 
       </select>
@@ -33,7 +36,7 @@
   </div> 
   <br>
   <div class="col-3 offset-8">
-    <button type="submit" class="btn btn-primary"  > Submit</button>
-  </div>
+    <button type="button" class="btn btn-primary" (click)="j()"> Submit</button>
+  </div>output
  
 </form>

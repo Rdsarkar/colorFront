@@ -20,7 +20,7 @@ const routes: Routes = [
     component: InputDetailsComponent
   },
   {
-    path: 'output',
+    path: 'output/:subId/:sessionId/:year',
     component: OutputDetailsComponent
   }
 ];
