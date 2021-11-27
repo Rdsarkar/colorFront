@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Output1Model } from './model/output.model';
-import { Res2 } from './model/res2.model';
-import { SubmitModel } from '../input-details/model/submit.model';
-import { OutputModel } from '../input-details/model/outputx.model';
+// import { Output1Model } from './model/output.model';
+// import { Res2 } from './model/res2.model';
+// import { SubmitModel } from '../input-details/model/submit.model';
+// import { OutputModel } from '../input-details/model/outputx.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { OutputDetailsService } from './service/output-details.service';
 import Swal from 'sweetalert2';
@@ -17,8 +17,8 @@ export class OutputDetailsComponent implements OnInit {
   year: number | undefined;
 
   constructor(private outputDetailsService: OutputDetailsService, private activatedRoute: ActivatedRoute) { }
-  singleData: SubmitModel[] = [];
-  allDatarec: OutputModel[] = [];
+  // singleData: SubmitModel[] = [];
+  // allDatarec: OutputModel[] = [];
   raj: any;
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(

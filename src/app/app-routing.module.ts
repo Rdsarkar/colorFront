@@ -8,13 +8,9 @@ import { OutputDetailsComponent } from './component/output-details/output-detail
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'output',
+    redirectTo: 'input',
     pathMatch: 'full'
   },
-  // {
-  //   path: 'home',
-  //   component: MyColorComponent
-  // },
   {
     path: 'input',
     component: InputDetailsComponent
