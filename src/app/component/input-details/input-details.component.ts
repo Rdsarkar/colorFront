@@ -36,7 +36,6 @@ export class InputDetailsComponent implements OnInit {
         console.log("test");
         console.log(alvi);
 
-
         this.examlevel = alvi.payload;
       },
       (dip) => {
@@ -44,8 +43,6 @@ export class InputDetailsComponent implements OnInit {
 
       }
     );
-
-   
   }
 
   sessionYears(): number[] {
@@ -59,7 +56,6 @@ export class InputDetailsComponent implements OnInit {
 
   searchButton(x: SubmitModel) {
     let i: number;
-
   }
 
   j() {
@@ -68,7 +64,7 @@ export class InputDetailsComponent implements OnInit {
         icon: 'error',
         title: 'Oops...',
         text: 'Please select valid exam level',
-        footer: '<a href="">Rajdeep vai issue fix koren</a>'
+        footer: '<a href="">Invalid</a>'
       });
     }
     else if (this.inputMi == undefined) {
@@ -76,7 +72,7 @@ export class InputDetailsComponent implements OnInit {
         icon: 'error',
         title: 'Oops...',
         text: 'Please select valid month id',
-        footer: '<a href="">Rajdeep vai issue fix koren</a>'
+        footer: '<a href="">Invalid</a>'
       });
     }
     else if (this.inputSy == undefined) {
@@ -84,7 +80,7 @@ export class InputDetailsComponent implements OnInit {
         icon: 'error',
         title: 'Oops...',
         text: 'Please select valid session year',
-        footer: '<a href="">Rajdeep vai issue fix koren</a>'
+        footer: '<a href="">Invalid</a>'
       });
     }
     else {

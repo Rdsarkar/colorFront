@@ -1,42 +1,39 @@
 <br><br><br><br><br>
-
-<form class="col-5 offset-3" >
-
-  <label for="exampleFormControlInput1"> Exam Fee Details</label>
-
-
+<label class="col-6 offset-6" for="exampleFormControlInput1" style="font-size: 15px;"> Exam Fee Details</label>
+<br><br>
+<form class="col-5 offset-3"  style="text-align: end; font-size: 15px;">
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Example Level</label>
-    <select [(ngModel)]="inputEl" class="form-control" id="exampleFormControlSelect1" name="el" required>
-      <option value="undefined" disabled>Please select</option>
-      <option *ngFor="let input1 of examlevel" value="{{input1.subId}}">{{input1.subName}}</option>
-
-    </select>
+    <div class="row">
+      <div class="col-3" style="padding-top: 5px;">ExamLevel</div>
+      <div class="col-9">
+        <select [(ngModel)]="inputEl" class="form-control" id="exampleFormControlSelect1" name="el" required>
+          <option value="undefined" disabled>Please select</option>
+          <option *ngFor="let input1 of examlevel" value="{{input1.subId}}">{{input1.subName}}</option>
+        </select>
+      </div>
+    </div>
   </div>
 
   <div class="row">
-
-    <div class="col">
+    <div class="col-2 " style="padding-top: 5px;">Session</div>
+    <div class="col-4">
       <select [(ngModel)]="inputMi" class="form-control"  id="exampleFormControlSelect1" name="mi" required>
         <option value="undefined" disabled>Please select</option>
         <option *ngFor="let inputs of session" value="{{inputs.sessionId}}">{{inputs.sessionName}}</option>
 
       </select>
     </div>
-    <div class="col">
+    <div class="col-2" style="padding-top: 5px;">Year</div>
+    <div class="col-4">
       <select [(ngModel)]="inputSy"  name="sy" class="form-control" id="exampleFormControlSelect1" required>
         <option value="undefined" disabled>Please select</option>
         <option *ngFor="let input1 of sessionYears()" value="{{input1}}">{{input1}}</option>
-
       </select>
-
     </div>
-
-   
   </div> 
   <br>
   <div class="col-3 offset-8">
     <button type="button" class="btn btn-primary" (click)="j()"> Submit</button>
-  </div>output
+  </div>
  
 </form>

@@ -19,54 +19,65 @@
   <h5 style="text-align: center;">Exam fee details for {{raj?.payload?.examLevelName}} of {{raj?.payload?.monthName}}, {{raj?.payload?.sessionYear}}</h5> <br>
 
 
+<table class="col-12">
+  <tr>
+    <td class="col-1"></td>
+    <td class="col-10">
+      <table class="table col-12" *ngIf="raj" style="font-size: 12px; text-align: center; white-space: nowrap;">
+        <thead>
+          <tr>
+            <th scope="col" style="border: 1px solid black; ">Reg. No.</th>
+            <th scope="col" style="border: 1px solid black;">Form No.</th>
+            <th scope="col" style="border: 1px solid black;">Name</th>
+            <th scope="col" style="border: 1px solid black; ">Father's Name</th>
+            <th scope="col" style="border: 1px solid black; ">Pay Date</th>
+            <th scope="col" style="border: 1px solid black; ">Pay slip#</th>
+            <th scope="col" style="border: 1px solid black; ">Bank & Branch</th>
+            <th scope="col" style="border: 1px solid black;">Amount</th>
+    
+    
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let lol of raj.payload.output">
+            <td scope="row" style="border: 1px solid black;">{{lol.regNo}}</td>
+    
+            <td scope="row" style="border: 1px solid black;">{{lol.formNo}}</td>
+    
+            <td scope="row" style="border: 1px solid black;">{{lol.name}}</td>
+    
+            <td scope="row" style="border: 1px solid black;">{{lol.fName}}</td>
+    
+            <td scope="row" style="border: 1px solid black;">{{lol.exfeepayslipdate}}</td>
+    
+            <td scope="row" style="border: 1px solid black;">{{lol.exfeepayslipno}}</td>
+    
+            <td scope="row" style="border: 1px solid black;">{{lol.exfeepayslipbank}}, {{lol.exfeepayslipbr}}</td>
+    
+            <td scope="row" style="border: 1px solid black;">{{lol.exfeepayslipamt}}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th style="text-align: end;">Total : </th>
+            <td style="border: 1px solid black;">{{raj.payload.sum}}</td>
+          </tr>
+        </tbody>
+       
+    
+      </table>
+    </td>
+    <td class="col-1">
+     
+    </td>
+  </tr>
 
-  <table class="table col-12" *ngIf="raj" style="font-size: 12px; text-align: center; white-space: nowrap;">
-    <thead>
-      <tr>
-        <th scope="col" style="border: 1px solid black; ">Reg. No.</th>
-        <th scope="col" style="border: 1px solid black;">Form No.</th>
-        <th scope="col" style="border: 1px solid black;">Name</th>
-        <th scope="col" style="border: 1px solid black; ">Father's Name</th>
-        <th scope="col" style="border: 1px solid black; ">Pay Date</th>
-        <th scope="col" style="border: 1px solid black; ">Pay slip#</th>
-        <th scope="col" style="border: 1px solid black; ">Bank & Branch</th>
-        <th scope="col" style="border: 1px solid black;">Amount</th>
-
-
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let lol of raj.payload.output">
-        <td scope="row" style="border: 1px solid black;">{{lol.regNo}}</td>
-
-        <td scope="row" style="border: 1px solid black;">{{lol.formNo}}</td>
-
-        <td scope="row" style="border: 1px solid black;">{{lol.name}}</td>
-
-        <td scope="row" style="border: 1px solid black;">{{lol.fName}}</td>
-
-        <td scope="row" style="border: 1px solid black;">{{lol.exfeepayslipdate}}</td>
-
-        <td scope="row" style="border: 1px solid black;">{{lol.exfeepayslipno}}</td>
-
-        <td scope="row" style="border: 1px solid black;">{{lol.exfeepayslipbank}}, {{lol.exfeepayslipbr}}</td>
-
-        <td scope="row" style="border: 1px solid black;">{{lol.exfeepayslipamt}}</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <th style="text-align: end;">Total : </th>
-        <td style="border: 1px solid black;">{{raj.payload.sum}}</td>
-      </tr>
-    </tbody>
-    <b>Inword : </b>
-
-  </table>
+</table>
+<b style="white-space: nowrap;" class="offset-1">Inword : {{withDecimalforDate(raj.payload.sum)}}. </b>
 
   <hr class="col-10 offset-1" style="border: .01em solid lightslategrey">
 
